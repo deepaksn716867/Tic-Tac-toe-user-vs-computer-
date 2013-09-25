@@ -1,0 +1,443 @@
+<html>
+	<head>
+		<title>tic tac toe</title>
+		<script>
+			var count=0;
+			var player1;
+			var upper_bound=9;
+			var lower_bound=1;
+			var array=new Array();
+			
+			
+			function fun(id)
+			{	
+				var rad;
+				var a=document.getElementById(id);
+				array[id]=1;
+				a.value="o";
+				if(id==1)
+				{
+					if((document.getElementById(2).value==a.value)&&(document.getElementById(3).value==a.value))
+					{
+						
+							alert(player1+" "+"wins");
+						
+						
+					}
+					
+					if((document.getElementById(4).value==a.value)&&(document.getElementById(7).value==a.value))
+					{
+						
+							alert(player1+" "+"wins");
+						
+						
+					}
+					if((document.getElementById(5).value==a.value)&&(document.getElementById(9).value==a.value))
+					{
+					
+						
+							alert(player1+"wins");
+						
+						
+					}
+				}
+				else if(id==2)
+				{
+					if((document.getElementById(5).value==a.value)&&(document.getElementById(8).value==a.value))
+					{
+						
+							alert(player1+" "+"wins");
+						
+						
+					}
+					
+					if((document.getElementById(1).value==a.value)&&(document.getElementById(3).value==a.value))
+					{
+						
+							alert(player1+" "+"wins");
+						
+						
+					}
+					
+				}
+				else if(id==3)
+				{
+					if((document.getElementById(1).value==a.value)&&(document.getElementById(2).value==a.value))
+					{
+						
+							alert(player1+" "+"wins");
+						
+						
+					}
+					
+					if((document.getElementById(6).value==a.value)&&(document.getElementById(9).value==a.value))
+					{
+						
+							alert(player1+" "+"wins");
+						
+						
+					}
+					if((document.getElementById(5).value==a.value)&&(document.getElementById(7).value==a.value))
+					{
+					
+						
+							alert(player1+" "+"wins");
+						
+					}
+				}
+				else if(id==4)
+				{
+					if((document.getElementById(5).value==a.value)&&(document.getElementById(6).value==a.value))
+					{
+						
+							alert(player1+" "+"wins");
+						
+					}
+					
+					if((document.getElementById(1).value==a.value)&&(document.getElementById(7).value==a.value))
+					{
+						
+							alert(player1+" "+"wins");
+						
+					}
+				}
+				else if(id==5)
+				{
+					if((document.getElementById(4).value==a.value)&&(document.getElementById(6).value==a.value))
+					{
+						
+							alert(player1+" "+"wins");
+						
+						
+					}
+					
+					if((document.getElementById(2).value==a.value)&&(document.getElementById(8).value==a.value))
+					{
+						
+							alert(player1+" "+"wins");
+						
+					}
+					if((document.getElementById(1).value==a.value)&&(document.getElementById(9).value==a.value))
+					{
+					
+						
+							alert(player1+" "+"wins");
+						
+					}
+				}
+				else if(id==6)
+				{
+					if((document.getElementById(5).value==a.value)&&(document.getElementById(4).value==a.value))
+					{
+						
+							alert(player1+" "+"wins");
+						
+					}
+					
+					if((document.getElementById(3).value==a.value)&&(document.getElementById(9).value==a.value))
+					{
+						
+							alert(player1+" "+"wins");
+						
+					}
+				}
+				else if(id==7)
+				{
+					if((document.getElementById(1).value==a.value)&&(document.getElementById(4).value==a.value))
+					{
+						
+							alert(player1+" "+"wins");
+						
+					}
+					
+					if((document.getElementById(8).value==a.value)&&(document.getElementById(9).value==a.value))
+					{
+						
+							alert(player1+" "+"wins");
+						
+					}
+					if((document.getElementById(5).value==a.value)&&(document.getElementById(3).value==a.value))
+					{
+					
+						
+							alert(player1+" "+"wins");
+						
+					}
+				}
+				else if(id==8)
+				{
+					if((document.getElementById(7).value==a.value)&&(document.getElementById(9).value==a.value))
+					{
+						
+							alert(player1+" "+"wins");
+						
+					}
+					
+					if((document.getElementById(2).value==a.value)&&(document.getElementById(5).value==a.value))
+					{
+						
+							alert(player1+" "+"wins");
+						
+					}
+				}
+				else if(id==9)
+				{
+					if((document.getElementById(7).value==a.value)&&(document.getElementById(8).value==a.value))
+					{
+						
+							alert(player1+" "+"wins");
+						
+					}
+					
+					if((document.getElementById(3).value==a.value)&&(document.getElementById(6).value==a.value))
+					{
+						
+							alert(player1+" "+"wins");
+						
+					}
+					if((document.getElementById(1).value==a.value)&&(document.getElementById(5).value==a.value))
+					{
+					
+						
+							alert(player1+" "+"wins");
+						
+					}
+				}
+				while(1)
+				{
+					rad=Math.round(Math.random()*(upper_bound - lower_bound) + lower_bound);
+					if(!(array[rad]==1))
+					{
+						array[rad]=1;
+						document.getElementById(rad).value="*";
+						b=rad;
+						break;
+					}
+				}
+				if(b==1)
+				{
+					if((document.getElementById(2).value=="*")&&(document.getElementById(3).value=="*"))
+					{
+						
+							alert("computer"+" "+"wins");
+						
+						
+					}
+					
+					if((document.getElementById(4).value=="*")&&(document.getElementById(7).value=="*"))
+					{
+						
+							alert("coumpter"+" "+"wins");
+						
+						
+					}
+					if((document.getElementById(5).value=="*")&&(document.getElementById(9).value=="*"))
+					{
+					
+						
+							alert("coumpter"+" "+"wins");
+						
+						
+					}
+				}
+				else if(b==2)
+				{
+					if((document.getElementById(5).value=="*")&&(document.getElementById(8).value=="*"))
+					{
+						
+							alert("coumpter"+" "+"wins");
+						
+						
+					}
+					
+					if((document.getElementById(1).value=="*")&&(document.getElementById(3).value=="*"))
+					{
+						
+							alert("coumpter"+" "+"wins");
+						
+						
+					}
+					
+				}
+				else if(b==3)
+				{
+					if((document.getElementById(1).value=="*")&&(document.getElementById(2).value=="*"))
+					{
+						
+							alert("coumpter"+" "+"wins");
+						
+						
+					}
+					
+					if((document.getElementById(6).value=="*")&&(document.getElementById(9).value=="*"))
+					{
+						
+							alert("coumpter"+" "+"wins");
+						
+						
+					}
+					if((document.getElementById(5).value=="*")&&(document.getElementById(7).value=="*"))
+					{
+					
+						
+							alert("coumpter"+" "+"wins");
+						
+					}
+				}
+				else if(b==4)
+				{
+					if((document.getElementById(5).value=="*")&&(document.getElementById(6).value=="*"))
+					{
+						
+							alert("coumpter"+" "+"wins");
+						
+					}
+					
+					if((document.getElementById(1).value=="*")&&(document.getElementById(7).value=="*"))
+					{
+						
+							alert("coumpter"+" "+"wins");
+						
+					}
+				}
+				else if(b==5)
+				{
+					if((document.getElementById(4).value=="*")&&(document.getElementById(6).value=="*"))
+					{
+						
+							alert("coumpter"+" "+"wins");
+						
+						
+					}
+					
+					if((document.getElementById(2).value=="*")&&(document.getElementById(8).value=="*"))
+					{
+						
+							alert("coumpter"+" "+"wins");
+						
+					}
+					if((document.getElementById(1).value=="*")&&(document.getElementById(9).value=="*"))
+					{
+					
+						
+							alert("coumpter"+" "+"wins");
+						
+					}
+				}
+				else if(b==6)
+				{
+					if((document.getElementById(5).value=="*")&&(document.getElementById(4).value=="*"))
+					{
+						
+							alert("coumpter"+" "+"wins");
+						
+					}
+					
+					if((document.getElementById(3).value=="*")&&(document.getElementById(9).value=="*"))
+					{
+						
+							alert("coumpter"+" "+"wins");
+						
+					}
+				}
+				else if(b==7)
+				{
+					if((document.getElementById(1).value=="*")&&(document.getElementById(4).value=="*"))
+					{
+						
+							alert("coumpter"+" "+"wins");
+						
+					}
+					
+					if((document.getElementById(8).value=="*")&&(document.getElementById(9).value=="*"))
+					{
+						
+							alert("coumpter"+" "+"wins");
+						
+					}
+					if((document.getElementById(5).value=="*")&&(document.getElementById(3).value=="*"))
+					{
+					
+						
+							alert("coumpter"+" "+"wins");
+						
+					}
+				}
+				else if(b==8)
+				{
+					if((document.getElementById(7).value=="*")&&(document.getElementById(9).value=="*"))
+					{
+						
+							alert("coumpter"+" "+"wins");
+						
+					}
+					
+					if((document.getElementById(2).value=="*")&&(document.getElementById(5).value=="*"))
+					{
+						
+							alert("coumpter"+" "+"wins");
+						
+					}
+				}
+				else if(b==9)
+				{
+					if((document.getElementById(7).value=="*")&&(document.getElementById(8).value=="*"))
+					{
+						
+							alert("coumpter"+" "+"wins");
+						
+					}
+					
+					if((document.getElementById(3).value=="*")&&(document.getElementById(6).value=="*"))
+					{
+						
+							alert("coumpter"+" "+"wins");
+						
+					}
+					if((document.getElementById(1).value=="*")&&(document.getElementById(5).value=="*"))
+					{
+					
+						
+							alert("coumpter"+" "+"wins");
+						
+					}
+				}
+					
+				
+			}
+			function play()
+			{
+				player1=prompt("Enter player name");
+				
+			}
+					
+		</script>
+	</head>
+	<body onload="play()">
+		<center>
+		<h2>tic tac toe</h2>
+		<hr>
+			
+		<table border="1" width="300" height="300">
+			<tr>
+				<td height="100px" weight="100px"><input type="button" size="100" id="1" onclick=fun(1)></td>
+				<td><input type="button"  size="300" id="2" onclick=fun(2)></td>
+				<td><input type="button"  size="100" id="3" onclick=fun(3)></td>
+			</tr>
+			<tr>
+				<td><input type="button" size="100" id="4" onclick=fun(4)></td>
+				<td><input type="button" size="100" id="5" onclick=fun(5)></td>
+				<td><input type="button" size="100" id="6" onclick=fun(6)></td>
+			</tr>
+			<tr>
+				<td><input type="button" size="100" id="7" onclick=fun(7)></td>
+				<td><input type="button" size="100" id="8" onclick=fun(8)></td>
+				<td><input type="button" size="100" id="9" onclick=fun(9)></td>
+			</tr>
+		</table>
+		</center>
+	</body>
+</html>
+
+
+	
